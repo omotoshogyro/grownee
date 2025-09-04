@@ -234,7 +234,7 @@ useEffect(() => {
                 <div className={`box ${activeIndex === 3 ? "focus" : "not_focused"}`}>
                 <div className="before" ref={sectFourth}></div>
                 <h6>Ask Grownee Anything</h6>
-                <p>Grownee's AI gives localized, and easy-to-follow to help guide your financial decision.</p>
+                <p>{`Grownee's AI gives localized, and easy-to-follow to help guide your financial decision.`}</p>
                 </div>
                 
             </div>
@@ -345,7 +345,7 @@ useEffect(() => {
             </div>
             <div className="mobile" ref={mobileref4}> 
                 <h6>Ask Grownee Anything</h6>
-                <p>Grownee's AI gives localized, and easy-to-follow to help guide your financial decision.</p></div>
+                <p>{`Grownee's AI gives localized, and easy-to-follow to help guide your financial decision.`}</p></div>
              <div className={`content fourth ${activeIndex === 3 ? "inview" : "not_in_view"}`} ref={fourthRef}>
                 <div className="frame">
                     <button ref={buttonRef}><Bolt/> <span>Ask Grownee</span></button>

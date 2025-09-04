@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
-function page() {
+function Page() {
   const waitlistRef = useRef()
   useEffect(()=>{
     gsap.fromTo(
@@ -69,4 +69,4 @@ function page() {
   )
 }
 
-export default page
+export default Page

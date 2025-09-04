@@ -8,13 +8,31 @@ import Faq from './FaqProp'
 function Faqs() {
   const [activeIndex, setActiveIndex] = useState(null);
   const FaqData=[
-    {question:"What is Grownee?",answer:"Grownee is your personal finance companion, built to help you save smarter, invest with confidence, and manage your budget effortlessly. It’s designed to simplify money growth, all in one app."},
-    {question:"Why should I join the waitlist?",answer:"Grownee is your personal finance companion, built to help you save smarter, invest with confidence, and manage your budget effortlessly. It's designed to simplify money growth, all in one app."},
-    {question:"Is Grownee safe to use?",answer:"Grownee is your personal finance companion, built to help you save smarter, invest with confidence, and manage your budget effortlessly. It’s designed to simplify money growth, all in one app."},
-    {question:"When will Grownee launch?",answer:"Grownee is your personal finance companion, built to help you save smarter, invest with confidence, and manage your budget effortlessly. It’s designed to simplify money growth, all in one app."},
-    {question:"Who can join Grownee?",answer:"Grownee is your personal finance companion, built to help you save smarter, invest with confidence, and manage your budget effortlessly. It’s designed to simplify money growth, all in one app."},
-    {question:"How will I know when Grownee is ready?",answer:"Grownee is your personal finance companion, built to help you save smarter, invest with confidence, and manage your budget effortlessly. It’s designed to simplify money growth, all in one app."},
-  ]
+  {
+    question: "What is Grownee?",
+    answer: "Grownee is a personal finance app built to help you save smarter, invest confidently, and manage your budget with ease. Think of it as your all-in-one money growth companion."
+  },
+  {
+    question: "Why should I join the waitlist?",
+    answer: "Joining the waitlist gives you early access to Grownee and a chance to experience a new, better way to manage your money before anyone else."
+  },
+  {
+    question: "Is Grownee safe to use?",
+    answer: "Yes. Grownee partners with SEC-licensed and regulated fund managers to keep your money safe. We prioritize security and transparency, so you can focus on reaching your goals with peace of mind."
+  },
+  {
+    question: "When will Grownee launch?",
+    answer: "We're going live in January 2026. Waitlist members will be the first to know and get early access to our features."
+  },
+  {
+    question: "Who can join Grownee?",
+    answer: "Anyone in Nigeria, 18 years or older, with a smartphone and a bank account."
+  },
+  {
+    question: "How will I know when Grownee is ready?",
+    answer: "You'll get an email notification once the app launches, along with exclusive updates and early-access invites."
+  }
+];
   const faqRef = useRef();
   useEffect(() => {
     gsap.fromTo(

@@ -19,10 +19,10 @@ function Faqs() {
   useEffect(() => {
     gsap.fromTo(
       faqRef.current,
-      { opacity: 0 },
+      { opacity: 0, y:20 },
       {
-        opacity: 1,
-        duration:0.6,
+        opacity: 1,y:0,
+        duration:0.8,
         ease: "back.out(1.4)",
         scrollTrigger: {
           trigger: faqRef.current,

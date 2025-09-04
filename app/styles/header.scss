@@ -36,14 +36,14 @@
                 gap: 1rem;
                 text-align: left;
                 &.up{
-                    background: linear-gradient(to right, #00A663, #00D076);
+                   background: linear-gradient(to right,#00A663, #00D076);
                     margin-top: 9rem;
                     p,h6{
                         color: white;
                     }
                 }
                 &.down{
-                    background-color: $color-soft;
+                     background-color: $color-soft;
                     margin-top: 2rem;
                 }
                 .union{
@@ -89,16 +89,14 @@
                     padding: .8rem 1.1rem;
                     border-radius: 2rem;
                     gap: .7rem;
-                    
+                    text-align: left;
                     h6{
                         font-size: 1.1rem;
                     }
                     p{
                         font-size: 1rem;
                     }
-                    &.up{
-                        background: linear-gradient(to right,#00A663, #00D076);
-                    }
+                 
                     &.down{
                         margin-top: 1.4rem;
                     }

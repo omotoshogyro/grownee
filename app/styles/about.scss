@@ -83,6 +83,8 @@
                 .top{
                     display: flex;
                     gap: 4rem;
+                    margin-top: 2.4rem;
+
                     p{
                         font-size: 1.4rem;
                         &.num{
@@ -208,6 +210,7 @@
                background: linear-gradient(to bottom, #F3F3F3, #FBFBFB);
                 padding: 0 4rem; 
                 border-radius: 2.4rem;
+                height: fit-content;
                 
                 .frame{
                     background-image: linear-gradient(to bottom, rgba(255,255,255,0), rgb(255,255,255)), url('/assets/frame.png');
@@ -215,7 +218,7 @@
                     background-position: center center;
                     background-repeat: no-repeat;
                     width: 100%;
-                    min-height: 70vh;
+                    min-height: 39rem;
                     display: grid;
                     place-items: end center;
                     button{

@@ -14,10 +14,10 @@ function Page() {
           y:0,
           opacity: 1,
           ease: "back.out(1.5)",
+          duration:0.8,
           scrollTrigger: {
             trigger: waitlistRef.current,
             start: "top center",
-            end:"center center",
             toggleActions: "play none none none", 
             once: true, 
       },
@@ -25,7 +25,7 @@ function Page() {
       )
   },[waitlistRef.current])
   return (
-    <div className='waitlist'> 
+    <div className='waitlist' id="waitlist"> 
         <div className='waitlist__wrapper'>
           <div className='waitlist__wrapper__section' ref={waitlistRef}>
             <h3>Join the waitlist</h3>

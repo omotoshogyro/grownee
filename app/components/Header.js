@@ -41,24 +41,43 @@ function Header() {
 
 
   useEffect(()=>{
-     gsap.set([upRef.current, downRef.current], { scale: 0.8, opacity: 0 });
-     ScrollTrigger.create({
-      trigger: phoneRef.current,
-      start: "top center", 
-      onEnter: () => {
-       if (!upRef.current || !downRef.current) return;
-        gsap.to(
-          [upRef.current, downRef.current],
+     if (window.matchMedia("(min-width: 920px) and (max-width:1280px)").matches) {
+      gsap.set([upRef.current, downRef.current], { scale: 0.8, opacity: 0 });
+      ScrollTrigger.create({
+        trigger: phoneRef.current,
+        start: "top center", 
+        onEnter: () => {
+        if (!upRef.current || !downRef.current) return;
+          gsap.to(
+            [upRef.current, downRef.current],
+            {
+              scale: 1,
+              opacity: 1,
+              duration: 0.5,
+              stagger: 0.4,
+              ease: "back.out(1.7)",
+            }
+          );
+        },
+      });
+     }
+     else{
+      const pops =[upRef.current, downRef.current]
+        pops.forEach((ref, index) => {
+        gsap.fromTo(
+          ref,
+          { opacity: 0, scale: 0.6 },
           {
-            scale: 1,
             opacity: 1,
-            duration: 0.5,
+            scale: 1,
+            duration: 0.6,
             stagger: 0.4,
             ease: "back.out(1.7)",
+            delay: 0.8+(0.2*index)
           }
-        );
-      },
-    });
+        )
+      })
+     }
   },[])
   return (
     <div className='header'>
@@ -66,7 +85,7 @@ function Header() {
         <div className='header__top'>
               <h2 ref={hRef}> Save, invest and <br/> budget wisely</h2>
               <p className='center' ref={centerRef}>Build better money habits with a personal finance assistant made just for you.</p>
-              <Link href={"/waitlist"}>
+              <Link href={"#waitlist"}>
                 <button ref={buttonRef}><WaitlistIcon className="icon"/> <span>Join Waitlist</span></button>
               </Link>
              

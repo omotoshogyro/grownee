@@ -1,0 +1,118 @@
+.header{
+    padding-top: 2.4rem;
+    padding-bottom: 8rem;
+    width: 100%;
+    text-align: center;
+    height: 100%;
+    &__top{
+        padding: 6rem 1.6rem 1.6rem;
+        text-align: center;
+        p{
+            margin: 1.6rem auto 0;
+            max-width: 43rem;
+            
+        }
+        button{
+            margin: 3.2rem auto;        
+        }
+    }
+    &__bottom{
+        position: relative;
+        width: 50rem;
+        margin: 2rem auto 0;
+        &__image{
+            width: 39rem;
+            height: auto;
+        }
+        .pop_ups{
+            position: absolute;
+            top: 0;
+            z-index: 2;
+            &__content{
+                display: flex;
+                align-items: center;
+                padding: 1.4rem;
+                border-radius: 2.3rem;
+                gap: 1rem;
+                text-align: left;
+                &.up{
+                    background: linear-gradient(to right, #00A663, #00D076);
+                    margin-top: 9rem;
+                    p,h6{
+                        color: white;
+                    }
+                }
+                &.down{
+                    background-color: $color-soft;
+                    margin-top: 2rem;
+                }
+                .union{
+                    background-color: white;
+                    border-radius: 6px;
+                    height: 5.7rem;
+                    width: 5.7rem;
+                    display: grid;
+                    place-items: center;
+                  
+                }
+
+            }
+        }
+    }
+}
+@media screen and (max-width:700px) {
+    .header{
+        padding-top: 2rem;
+        padding-bottom: 6rem;
+         &__top{
+            padding: 4rem 1.4rem 2rem;
+            p{
+                margin: 1.4rem auto 0;
+                max-width: 29rem;
+            }
+            button{
+                margin: 2.4rem auto;            
+            }
+        }
+         &__bottom{
+            width: 100%;
+            padding: 0 2rem;
+            margin: 2rem 0 0;
+            &__image{
+                width: 80%;
+                height: 24rem;
+            }
+            .pop_ups{
+                width:88%;
+                
+                &__content{
+                    padding: .8rem 1.1rem;
+                    border-radius: 2rem;
+                    gap: .7rem;
+                    
+                    h6{
+                        font-size: 1.1rem;
+                    }
+                    p{
+                        font-size: 1rem;
+                    }
+                    &.up{
+                        background: linear-gradient(to right,#00A663, #00D076);
+                    }
+                    &.down{
+                        margin-top: 1.4rem;
+                    }
+                    .union{
+                        height: 3.4rem;
+                        width: 3.4rem;
+                        border-radius: 7px;
+                        svg{
+                            scale: 0.7;
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+}

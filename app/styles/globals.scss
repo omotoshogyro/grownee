@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import "./_variables.scss";
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    font-family: "Inter";
+}
+input{
+    display: block;
+    outline: none;
+    width: 100%;
+    border: none;
+}
+h2{
+    font-family: "Geist";
+    font-weight: 700;
+    color: $color_lead;
+    font-size: 5.4rem;
+    line-height: 6.2rem;
+}
+h3{
+    font-family: "Geist";
+    font-weight: bold;
+    font-size: 2.4rem;
+}
+h6{
+    font-family: "Geist";
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 2.7rem;
+}
+p{
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 1.6rem;
+    color: $color_neutral;
+    line-height: 150%;
+}
+button{
+    padding: 1rem 1.6rem;
+    background-color: $color_lead;
+    font-family: 'Inter';
+    letter-spacing: 0.2px;
+    border-radius: 2.4rem;
+    font-size: 1.6rem;
+    color: #fff;
+    font-weight: 600;
+    outline: none;
+    border: none;
+    transition: box-shadow 0.5s ease;
+
+    &.flex{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: fit-content;
+        .icon{
+            margin-right: 1rem;
+        }
+    }
+    &:hover{
+        box-shadow: 1px 4px 4px 2px rgba(0,0,0,0.2);
+        cursor: pointer;
+    }
+}
+.navbar{
+    display: flex;
+    background-color: white;
+    padding: 1.6rem 8rem;
+    justify-content: space-between;
+    width: 100%;
+    z-index: 5;
+    &.active{
+        position: fixed;
+    }
+    &.initial{
+        display: none;
+    }
+}
+section.dark{
+    background-color: $color_lead;
+
+}
+
+@media screen and (max-width:600px) {
+    h2{
+        font-size: 2.8rem;
+        line-height: 3.4rem
+    }
+    p{
+        font-size: 1.4rem
+    }
+}
+
+@import "./header.scss";
+@import "./about.scss";
+@import "./waitlist.scss";
+@import "./faqs.scss";
+@import "./footer.scss";

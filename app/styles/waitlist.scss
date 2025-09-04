@@ -1,0 +1,113 @@
+.waitlist{
+    background-color: $color_lead;
+    background-image: url('/assets/bowl.svg');
+    background-repeat: no-repeat;
+    background-size: 90% 100%;
+    background-position: left top;
+    padding: 7rem 12rem 18rem;
+    min-height: 75vh;
+    &__wrapper{
+        background-color: white;
+        display: grid;
+        place-items: center;
+        padding: 8rem;
+        border-radius: 1.2rem 1.2rem 14rem 1.2rem;
+        &__section{
+            width: 46rem;
+            height: fit-content;
+            background-color: $color_soft;
+            padding: 2.4rem;
+            border-radius: 2.4rem;
+        }
+        h3{
+            text-align: center;
+            padding-bottom: 1.6rem;
+        }
+        p{
+            text-align: center;
+        }
+        form{
+            padding: 3.2rem 0;
+            label{
+                font-size: 1.4rem;
+                color: $color_neutral;
+            }
+            input{
+                border-radius: 8px;
+                border: 1px solid $color-tertiary;
+                padding: 1rem;
+                color: $color_lead;
+                margin-top: 1rem;
+                margin-bottom: 1.2rem;
+                &::placeholder{
+                    color: $color_neutral;
+                }
+            }
+            button{
+                width: 100%;
+                margin: 1rem 0 0;
+            }
+        }
+        .info{
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            align-items: center;
+            .personas{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                  .persona{
+                    width: 3rem;
+                    height: 3rem;
+                    border-radius: 50%;
+                    margin-left: -1rem;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:900px) {
+    .waitlist{
+        padding: 5rem 8rem 8rem;
+        &__wrapper{
+            padding:6rem 2rem;
+            &__section{
+                width: 80%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:600px) {
+    .waitlist{
+        padding: 0;
+        background-size: 100% 100%;
+      &__wrapper{
+            padding: 7.5rem 1.6rem;
+            border-radius: 1.6rem;
+            background-color: transparent;
+            &__section{
+                width: 100%;
+                border-radius:1.6rem;
+                padding: 1rem;
+                h3{
+                    font-size: 1.8rem;
+                }
+                p{
+                    font-size: 1.2rem;
+                }
+                .info{
+                   gap: .8rem;
+                   .personas{
+                    .persona{
+                        height: 2.4rem;
+                        width: 2.4rem;
+                    }
+                   }
+                 
+                }
+            }
+        }
+    }
+}
